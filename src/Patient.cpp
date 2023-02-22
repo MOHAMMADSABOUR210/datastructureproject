@@ -1,6 +1,6 @@
 #include "../include/Patient.h"
 
-Patient::Patient(const int patientNumber, const int enterTime, const int prepareTime, const int patience)
+Patient::Patient(int patientNumber, int enterTime, int prepareTime, int patience)
         : patient_number(patientNumber), enter_time(enterTime), prepare_time(prepareTime), patience(patience) {}
 
 int Patient::getPatientNumber() const {

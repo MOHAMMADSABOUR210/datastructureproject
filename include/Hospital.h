@@ -3,11 +3,13 @@
 
 #include <vector>
 #include <queue>
+#include <algorithm>
 #include "Patient.h"
 
 class Hospital {
 private:
     const int bedsCount;
+
     std::vector<Patient> patients;
 public:
     Hospital(int bedsCount);

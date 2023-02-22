@@ -4,12 +4,12 @@
 
 class Patient {
 private:
-    const int patient_number;
-    const int enter_time;
-    const int prepare_time;
-    const int patience;
+    int patient_number;
+    int enter_time;
+    int prepare_time;
+    int patience;
 public:
-    Patient(const int patientNumber, const int enterTime, const int prepareTime, const int patience);
+    Patient( int patientNumber,  int enterTime,  int prepareTime,  int patience);
 
     int getPatientNumber() const;
 

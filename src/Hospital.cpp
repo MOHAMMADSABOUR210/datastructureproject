@@ -5,9 +5,8 @@ Hospital::Hospital(int bedsCount) : bedsCount(bedsCount) {}
 
 void Hospital::receiptFcfsOrder() {
     std::queue<Patient> q;
-    for (auto patient : patients) {
+    for (auto patient : patients)
         q.push(patient);
-    }
     while (!q.empty()) {
         Patient p = q.front();
         q.pop();
@@ -32,12 +31,11 @@ void Hospital::receiptSfjOrder() {
 
 void Hospital::receiptPriorityScheduling() {
     sort(patients.begin(), patients.end(), [](const Patient &p1, const Patient &p2) {
-        if (p1.getEnterTime() == p2.getEnterTime()) {
+        if (p1.getEnterTime() == p2.getEnterTime())
             return p1.getPatience() < p2.getPatience();
-        }
         return p1.getEnterTime() < p2.getEnterTime();
     });
-    for (auto & patient : patients) {
+    for (auto &patient : patients) {
         std::cout << "Patient " << patient.getPatientNumber() << " received at " << patient.getEnterTime()
                   << " minutes"
                   << std::endl;
