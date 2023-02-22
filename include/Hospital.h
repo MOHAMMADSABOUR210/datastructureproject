@@ -8,12 +8,13 @@
 class Hospital {
 private:
     const int bedsCount;
-    const std::vector<Patient> patients;
-    std::queue<Patient> fcfs;
+    std::vector<Patient> patients;
 public:
-    const std::queue<Patient> &getFcfs() const;
+    Hospital(int bedsCount);
 
-    Hospital(int bedsCount, const std::vector<Patient> &patients);
+    void receiptPatient(Patient patient);
+
+    void receiptFcfsOrder();
 };
 
 

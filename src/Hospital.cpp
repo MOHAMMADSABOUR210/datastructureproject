@@ -1,12 +1,22 @@
+#include <iostream>
 #include "../include/Hospital.h"
 
-const std::queue<Patient> &Hospital::getFcfs() const {
-    return fcfs;
+Hospital::Hospital(int bedsCount) : bedsCount(bedsCount) {
+
 }
 
-Hospital::Hospital(int bedsCount, const std::vector<Patient> &patients) : bedsCount(
-        bedsCount), patients(patients) {
-    for (auto it = patients.end() -1; it == patients.begin(); --it) {
-
+void Hospital::receiptFcfsOrder() {
+    std::queue<Patient> q;
+    for (auto patient : patients) {
+        q.push(patient);
     }
+    while (!q.empty()) {
+        Patient p = q.front();
+        q.pop();
+        std::cout << "Patient " << p.getPatientNumber() << " entered hospital at " << p.getEnterTime() << std::endl;
+    }
+}
+
+void Hospital::receiptPatient(Patient patient) {
+    patients.push_back(patient);
 }
