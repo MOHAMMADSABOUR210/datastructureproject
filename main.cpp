@@ -2,9 +2,10 @@
 
 #include "include/BualiHospital.h"
 #include "include/ResalatHospital.h"
+#include "include/BeheshtiHospital.h"
 
 int main() {
-    ResalatHospital basu = ResalatHospital(1);
+    BeheshtiHospital basu = BeheshtiHospital(1);
     basu.addPatient(1, 0, 3, 1);
     basu.addPatient(2, 0, 3, 1);
     basu.addPatient(3, 1, 2, 1);

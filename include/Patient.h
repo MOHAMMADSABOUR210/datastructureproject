@@ -11,7 +11,13 @@ private:
     int start_time;
     int end_time;
     bool alive;
+    int wait_time;
 public:
+
+    int getWaitTime() const;
+
+    void setWaitTime(int waitTime);
+
     void setPatientNumber(int patientNumber);
 
     void setEnterTime(int enterTime);

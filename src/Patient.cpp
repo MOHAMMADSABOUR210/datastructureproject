@@ -53,3 +53,11 @@ void Patient::setPrepareTime(int prepareTime) {
 void Patient::setPatience(int patience) {
     Patient::patience = patience;
 }
+
+int Patient::getWaitTime() const {
+    return wait_time;
+}
+
+void Patient::setWaitTime(int waitTime) {
+    wait_time = waitTime;
+}
