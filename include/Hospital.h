@@ -15,6 +15,10 @@ public:
     void receiptPatient(Patient patient);
 
     void receiptFcfsOrder();
+
+    void receiptSfjOrder();
+
+    void receiptPriorityScheduling();
 };
 
 
