@@ -11,13 +11,13 @@ private:
 public:
     Patient(const int patientNumber, const int enterTime, const int prepareTime, const int patience);
 
-    const int getPatientNumber() const;
+    int getPatientNumber() const;
 
-    const int getEnterTime() const;
+    int getEnterTime() const;
 
-    const int getPrepareTime() const;
+    int getPrepareTime() const;
 
-    const int getPatience() const;
+    int getPatience() const;
 };
 
 #endif
