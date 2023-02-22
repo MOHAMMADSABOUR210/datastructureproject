@@ -1,7 +1,3 @@
-//
-// Created by Saleh Soleimani on 2/22/23.
-//
-
 #ifndef HOSPITAL_BEHESHTIHOSPITAL_H
 #define HOSPITAL_BEHESHTIHOSPITAL_H
 

@@ -47,8 +47,7 @@ void ResalatHospital::addPatient(int number, int enter, int prepare, int patienc
 }
 
 void ResalatHospital::simulate() {
-    for (int i = 0; i < patients.size(); i++) {
-        Patient* p = patients[i];
+    for (auto p : patients) {
         waiting.push(p);
     }
 
