@@ -36,10 +36,6 @@ void BeheshtiHospital::addPatient(int number, int enter, int prepare, int patien
 }
 
 void BeheshtiHospital::simulate() {
-    numReleased = 0;
-    numDied = 0;
-    currentTime = 0;
-
     sort(patients.begin(), patients.end(), [](Patient *a, Patient *b) {
         if (a->getPrepareTime() == b->getPrepareTime()) {
             return a->getPatience() < b->getPatience();

@@ -4,6 +4,7 @@
 BualiHospital::BualiHospital(int bedsCount) : Hospital(bedsCount){}
 
 void BualiHospital::receiptPatient() {
+    //if there is beds available and patient is waiting occupy a bed
     if (inBeds.size() < bedsCount && !waiting.empty()) {
         Patient *patient = waiting.front();
         waiting.pop();
@@ -13,8 +14,10 @@ void BualiHospital::receiptPatient() {
 }
 
 void BualiHospital::releasePatient() {
+    //check if patient is ready to release
     for (int i = 0; i < inBeds.size(); i++) {
         Patient* patient = inBeds[i];
+        //if time elapsed equals to the time patient needs
         if (currentTime - patient->getStartTime() >= patient->getPrepareTime()) {
             patient->setEndTime(currentTime);
             inBeds.erase(inBeds.begin() + i);
@@ -43,7 +46,7 @@ void BualiHospital::checkPatientPatience() {
 }
 
 void BualiHospital::addPatient(int number, int enter, int prepare, int patience) {
-    Patient* patient = new Patient(number, enter, prepare, patience);
+    auto* patient = new Patient(number, enter, prepare, patience);
     waiting.push(patient);
 }
 

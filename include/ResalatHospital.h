@@ -7,7 +7,6 @@ using namespace std;
 
 class ResalatHospital : public Hospital {
 private:
-    vector<Patient *> patients;
     priority_queue<pair<int, Patient *>, vector<pair<int, Patient *>>, greater<pair<int, Patient *>>> priorityQueue;
 public:
     ResalatHospital(int bedsCount);

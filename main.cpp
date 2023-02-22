@@ -5,7 +5,7 @@
 #include "include/BeheshtiHospital.h"
 
 int main() {
-    Hospital * basu = new BeheshtiHospital(1);
+    Hospital * basu = new ResalatHospital(1);
     basu->addPatient(1, 0, 3, 1);
     basu->addPatient(2, 0, 3, 1);
     basu->addPatient(3, 1, 2, 1);
