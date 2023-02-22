@@ -6,22 +6,30 @@
 #include <algorithm>
 #include "Patient.h"
 
+using namespace std;
+
 class Hospital {
-private:
-    const int bedsCount;
-
-    std::vector<Patient> patients;
+protected:
+    int bedsCount;
+    queue<Patient *> waiting;
+    vector<Patient *> inBeds;
+    int currentTime;
+    int totalWaitTime;
+    int numReleased;
+    int numDied;
 public:
-    Hospital(int bedsCount);
+    explicit Hospital(int bedsCount);
 
-    void receiptPatient(Patient patient);
+    virtual void receiptPatient() = 0;
 
-    void receiptFcfsOrder();
+    virtual void releasePatient() = 0;
 
-    void receiptSfjOrder();
+    virtual void checkPatientPatience() = 0;
 
-    void receiptPriorityScheduling();
+    virtual void addPatient(int number, int enter, int prepare, int patience) = 0;
+
+    virtual void simulate() = 0;
 };
 
 
-#endif //HOSPITAL_HOSPITAL_H
+#endif //HOSPITAL_BUALIHOSPITAL_H
