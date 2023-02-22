@@ -12,6 +12,14 @@ private:
     int end_time;
     bool alive;
 public:
+    void setPatientNumber(int patientNumber);
+
+    void setEnterTime(int enterTime);
+
+    void setPrepareTime(int prepareTime);
+
+    void setPatience(int patience);
+
     Patient(int number, int enter, int prepare, int patience);
 
     int getEnterTime() const;

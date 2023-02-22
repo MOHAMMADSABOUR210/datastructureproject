@@ -37,3 +37,19 @@ void Patient::setAlive(bool alive) {
 int Patient::getStartTime() const {
     return start_time;
 }
+
+void Patient::setPatientNumber(int patientNumber) {
+    patient_number = patientNumber;
+}
+
+void Patient::setEnterTime(int enterTime) {
+    enter_time = enterTime;
+}
+
+void Patient::setPrepareTime(int prepareTime) {
+    prepare_time = prepareTime;
+}
+
+void Patient::setPatience(int patience) {
+    Patient::patience = patience;
+}
