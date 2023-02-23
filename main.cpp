@@ -5,29 +5,10 @@
 #include "include/BeheshtiHospital.h"
 
 int main() {
-    Hospital * basu = new BeheshtiHospital(1);
+    Hospital * basu = new BeheshtiHospital(5);
     basu->addPatient(1, 0, 3, 1);
     basu->addPatient(2, 0, 3, 1);
     basu->addPatient(3, 1, 2, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
-    basu->addPatient(4, 1, 1, 1);
     basu->addPatient(4, 1, 1, 1);
     basu->addPatient(5, 2, 3, 1);
     basu->simulate();
