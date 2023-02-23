@@ -35,6 +35,13 @@ public:
     void setEndTime(int endTime);
 
     void setAlive(bool alive);
+
+    bool operator<(const Patient &other) const {
+        if (prepare_time != other.prepare_time)
+            return prepare_time > other.prepare_time;
+        else
+            return patience > other.patience;
+    }
 };
 
 #endif

@@ -5,8 +5,8 @@
 
 class BeheshtiHospital : public Hospital {
 private:
-    vector<Patient *> patients;
-    priority_queue<pair<int, Patient *>, vector<pair<int, Patient *>>, greater<pair<int, Patient *>>> priorityQueue;
+    priority_queue<Patient *> priorityQueue;
+    int current_patients{};
 public:
     BeheshtiHospital(int bedsCount);
 
