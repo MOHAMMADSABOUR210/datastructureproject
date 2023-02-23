@@ -9,6 +9,7 @@ void BualiHospital::receiptPatient() {
         Patient *patient = waiting.front();
         waiting.pop();
         patient->setStartTime(currentTime);
+        patient->setBedNumber(inBeds.size());
         inBeds.push_back(patient);
     }
 }
@@ -23,6 +24,7 @@ void BualiHospital::releasePatient() {
             inBeds.erase(inBeds.begin() + i);
             totalWaitTime += patient->getStartTime() - patient->getEnterTime();
             numReleased++;
+            cout << "✨ The patient #" << patient->getPatientNumber() << " released from bed #" << patient->getBedNumber() << endl;
             delete patient;
             break;
         }
@@ -36,6 +38,7 @@ void BualiHospital::checkPatientPatience() {
             waiting.pop();
             patient->setAlive(false);
             numDied++;
+            cout << "🪦 The patient #" << patient->getPatientNumber() << " died " << endl;
             delete patient;
         }
         else {

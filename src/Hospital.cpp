@@ -1,8 +1,4 @@
-//
-// Created by Saleh Soleimani on 2/22/23.
-//
-
-#include "BualiHospital.h"
+#include "../include/Hospital.h"
 
 Hospital::Hospital(int bedsCount) : bedsCount(bedsCount) {
     currentTime = 0;

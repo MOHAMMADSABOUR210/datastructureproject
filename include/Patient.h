@@ -5,6 +5,7 @@
 class Patient {
 private:
     int patient_number;
+    int bed_number;
     int enter_time;
     int prepare_time;
     int patience;
@@ -12,6 +13,12 @@ private:
     int end_time;
     bool alive;
 public:
+    int getBedNumber() const;
+
+    void setBedNumber(int bedNumber);
+
+    int getPatientNumber() const;
+
     void setPatientNumber(int patientNumber);
 
     void setEnterTime(int enterTime);

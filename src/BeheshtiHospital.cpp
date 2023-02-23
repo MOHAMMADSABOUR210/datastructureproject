@@ -9,6 +9,7 @@ void BeheshtiHospital::receiptPatient() {
         Patient *p = priorityQueue.top();
         priorityQueue.pop();
         p->setStartTime(currentTime);
+        p->setBedNumber(inBeds.size());
         inBeds.push_back(p);
     } else if (!waiting.empty()) {
         Patient *p = waiting.front();
@@ -25,6 +26,7 @@ void BeheshtiHospital::releasePatient() {
             inBeds.erase(inBeds.begin() + i);
             totalWaitTime += (currentTime - p->getEnterTime());
             numReleased++;
+            cout << "✨ The patient #" << p->getPatientNumber() << " released from bed #" << p->getBedNumber() <<endl;
             delete p;
             break;
         }
@@ -37,6 +39,7 @@ void BeheshtiHospital::checkPatientPatience() {
         Patient *p = priorityQueue.top();
         priorityQueue.pop();
         p->setAlive(false);
+        cout << "🪦 The patient #" << p->getPatientNumber() << " died " << endl;
         numDied++;
         delete p;
     }
