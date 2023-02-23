@@ -1,3 +1,5 @@
 /cmake-build-debug/
 report.pdf
 report.pages
+/bin
+/doc
